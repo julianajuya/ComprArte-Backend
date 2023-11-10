@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "node app.js",
+    "production": "npm install --only=prod && node app.js",
     "test": "mocha 'test/*.js'"
   },
   "dependencies": {
