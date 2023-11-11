@@ -5,7 +5,6 @@ const todoraquiraRouter = require("./routes/routes.js")
 const {PORT} = require('./config.js')
 const app = express()
 
-
 app.use(cors())
 app.use(express.json({ limit: '10mb' }))
 app.use('/', todoraquiraRouter) 
@@ -15,6 +14,8 @@ async function startServer() {
       await db.authenticate();
       console.log('Conexión exitosa a la DB');
       
+      await db.sync();
+
       app.get('/', (req, res) =>{
         res.send('Hola mundo');
       });
