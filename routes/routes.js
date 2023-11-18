@@ -7,6 +7,7 @@ const {
   updateProduct,
   searchProduct,
   deleteProduct,
+  getProductByCategory
 } = require("../controllers/ProductController.js");
 const {
   getAllUsers,
@@ -66,6 +67,7 @@ router.delete("/delete/:email", deleteUser);
 //Rutas Productos
 router.get("/product", getAllProducts);
 router.get("/product/:id", getProduct);
+router.get('/product/category/:id_category', getProductByCategory)
 router.post("/createProduct", createProduct);
 router.put("/update/:id", updateProduct);
 router.patch("/state/:id", changeStateProduct);
