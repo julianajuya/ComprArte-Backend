@@ -32,7 +32,7 @@ exports.getProductByCategory = async (req, res) => {
   try {
     const products = await Product.findAll({
       where: {
-        id_category: req.params.id,
+        id_category: req.params.id_category,
       },
     });
     res.json(products);
