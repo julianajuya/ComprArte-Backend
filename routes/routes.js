@@ -9,6 +9,7 @@ const {
   deleteProduct,
   getProductByCategory
 } = require("../controllers/ProductController.js");
+
 const {
   getAllUsers,
   getUser,

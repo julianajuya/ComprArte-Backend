@@ -5,7 +5,7 @@ exports.getAllHistory = async (req, res) => {
         const history = await AddedProductsModel.findAll()
         res.json(history)
     } catch (error) {
-        res.json({ message: error.message })
+        res.json({"message": "Error al obtener historial"})
     }
 }
 
