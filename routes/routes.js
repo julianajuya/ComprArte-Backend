@@ -8,7 +8,7 @@ const {
   searchProduct,
   deleteProduct,
   getProductByCategory
-} = require("../controllers/ProductController.js");
+} = require("../controllers/productController.js");
 
 const {
   getAllUsers,
