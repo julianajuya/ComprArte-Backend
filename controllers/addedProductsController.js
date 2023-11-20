@@ -13,7 +13,7 @@ exports.getProductsByCotization = async (req, res) => {
     try {
         const productsList = await AddedProductsModel.findAll({
             where: {
-                id_quotation: req.params.id
+                id_quotation: req.params.id_category
             }
         })
         res.json(productsList)
